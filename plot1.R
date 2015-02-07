@@ -10,5 +10,6 @@ datetime<-paste(row$Date, row$Time)
 x<-strptime(datetime, "%d/%m/%Y %H:%M:%S")
 row$DateTime<-x
 png(filename = "plot1.png", width = 480, height = 480,  units = "px", bg = "transparent")
+par(bg="white")
 hist(row$Global_active_power, freq=TRUE, col='red',  main = paste("Global Active Power"), xlab=paste("Global Active Power(kilowatts)"))
 dev.off()

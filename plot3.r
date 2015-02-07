@@ -11,6 +11,7 @@ x<-strptime(datetime, "%d/%m/%Y %H:%M:%S", tz="UTC")
 row$DateTime<-x
 png(filename = "plot3.png", width = 480, height = 480,  units = "px", bg = "transparent")
 Sys.setlocale("LC_TIME", "English")
+par(bg="white")
 plot(row$DateTime, row$Sub_metering_1, col="black", type="l",  xlab= '', ylab=paste("Energy sub metering") )
 lines(row$DateTime, row$Sub_metering_2, col="red", type="l" )
 lines(row$DateTime, row$Sub_metering_3, col="blue", type="l" )

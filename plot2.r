@@ -11,5 +11,6 @@ x<-strptime(datetime, "%d/%m/%Y %H:%M:%S", tz="UTC")
 row$DateTime<-x
 png(filename = "plot2.png", width = 480, height = 480,  units = "px", bg = "transparent")
 Sys.setlocale("LC_TIME", "English")
+par(bg="white")
 plot(row$DateTime, row$Global_active_power, type="l",  xlab= '', ylab=paste("Global Active Power(kilowatts)"))
 dev.off()
